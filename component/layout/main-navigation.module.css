@@ -1,0 +1,118 @@
+
+.header{
+    background-color: rgb(0, 0, 0);
+    position: sticky;
+    top: 0px;
+    padding-bottom: 50px;
+   
+}
+.nav{
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-evenly;
+     
+}
+.alogo{
+    margin-top: 20px;
+}
+.main{
+    
+    margin-top: 40px;
+}
+.main ul li{
+    list-style: none;
+}
+.main ul li{
+    float: left;
+    margin-left: 20px;
+    color: white;
+    font-size: 1.2em;
+}
+.main ul li:hover{
+    border-bottom: solid var(--s-col) 2px;
+    transition: 300ms;
+}
+.section .hr{
+    height: 1px;
+    background-color: var(--p-col);
+    width: 90%;
+    margin: 50px auto;
+}
+.cart{
+    margin-top:20px;
+}
+.cart li{
+    list-style: none;
+}
+.cart span{
+    margin-left: 15px;
+   color: white;
+    padding: 10px;
+    font-weight: 900;
+    background-color:var(--s-col);
+    border-radius: 30%;
+}
+.mobileNav{
+    display: none
+}
+
+@media screen and (max-width:780px)  {
+   .nav{
+    display: none;
+   } 
+    
+.mobileNav{
+    display: flex;
+    justify-content: space-around;
+    } 
+    .mobileLogo{
+        margin-top: 20px;
+    }
+    .mobileCart{
+        margin-top: 20px;
+    }
+    .mobileCart li{
+        list-style-type: none;
+    }
+    .mobileNav .hamburger{
+        margin-top: 20px;
+    }
+    .mobileCart span{
+        margin-left: 15px;
+       color: white;
+        padding: 10px;
+        font-weight: 900;
+        background-color:var(--secondary-col);
+        border-radius: 30%;
+    }
+   .mobileNav .menu{
+        display: none;
+        border: solid gray 1px;
+        padding: 20px;
+        border-radius: 5px;
+        position: absolute;
+        background-color: white;
+        margin-left: -20px;
+    }
+    .mobileNav .menu ul li{
+    list-style: none;
+    margin-bottom: 5px;
+     
+    }
+    .menu li {
+    text-decoration: none;
+     
+    }
+    
+    .hamburger:hover .menu{
+    display: block;
+    }
+    
+    
+    @media screen and (min-width:600px)  {
+        .mobile-nav{
+         display: none;
+        } 
+     }
+}

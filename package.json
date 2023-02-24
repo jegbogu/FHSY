@@ -10,8 +10,14 @@
   },
   "dependencies": {
     "@next/font": "13.1.4",
+    "dotenv": "^16.0.3",
+    "iconify": "^1.4.0",
+    "mongodb": "^5.0.1",
     "next": "13.1.4",
     "react": "18.2.0",
     "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^6.5.1"
   }
 }
