@@ -16,7 +16,7 @@ const Home = (props) => {
           name='description'
           content='We have African home for export across the world!'
         />
-        <link rel="shortcut icon" href="A.webp" type="image/x-icon"></link>
+        <link rel="shortcut icon" href="brand.webp" type="image/x-icon"></link>
       </Head>
       <BannerL/>
       <ProductList products={props.products}/>

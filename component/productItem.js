@@ -1,6 +1,13 @@
+import { useRouter } from 'next/router';
 import classes from './productItem.module.css'
 
+
+
 function ProductItem(props){
+    const router = useRouter();
+    function showDetailsHandler() {
+        router.push('/' + props.id);
+      }
     return(
  
 <li className={classes.productItem}>
@@ -14,7 +21,7 @@ function ProductItem(props){
             <h3>{props.title}</h3>
             <p>Price: ${props.price}</p>
             <button>Add to Cart</button>
-           <span> <button>Product Details</button></span>
+           <span>  <button onClick={showDetailsHandler}>Show Details</button></span>
         </div>
 
 
