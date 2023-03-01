@@ -3,8 +3,11 @@ import Cart from "./cart";
 import Logo from "./logo";
 import Hamburger from "./hamburger";
 import classes from './main-navigation.module.css'
+import { useContext } from 'react';
+import CartsContext from '../../store/product-context'
  
 const MainNavigation = () => {
+    const cartCtx = useContext(CartsContext)
     return ( 
         <header className={classes.header}>
             <div className={classes.section}>
@@ -20,14 +23,14 @@ const MainNavigation = () => {
                         <li><Link href='/'>Home</Link></li>
                         <li><Link href='/about'>About</Link></li>
                         <li><Link href='/contact'>Contact</Link></li>
-                        <li><Link href='/shop'>Shop</Link></li>
+                        <li><Link href='/blog'>Blog</Link></li>
                         
                     </ul>
                 </main>
                 </div> 
                 <div className={classes.cart}>
                 <li><Link href='/cart'><Cart/></Link></li>
-                <span>0</span>
+                <span>{cartCtx.totalCarts}</span>
                 </div>
                  
             </nav>

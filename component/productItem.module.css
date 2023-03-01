@@ -1,15 +1,13 @@
-.productItem{
-    float: left;
-     width: 30%;
-     margin-top: 20px;
-     margin-left: 35px;
-     background-color: black;
-    }
+ 
 
 .item{
     padding: 20px;
     border: solid gray 1px;
-    box-shadow: gray 2px 2px 1px;
+    box-shadow: gray 1px 2px 3px;
+     width: 95%;
+    background-color: black;
+    margin-top: 20px;
+    border-radius: 5px;
 }
 .figure{
     width: 100%;
@@ -32,6 +30,13 @@
     border-radius: 5px;
     color: white;
     font-weight: 900;
+    cursor: pointer;
+}
+.itemBody button:hover{
+    background-color: var(--p-col);
+    padding: 10px 30px 10px 30px;
+    border: none;
+     
 }
 .itemBody span{
     margin-left: 20px;
@@ -44,6 +49,38 @@
     cursor:pointer;
     color: white;
 }
+.itemBody span button:hover{
+    background-color: rgba(255, 68, 0, 0);
+    padding: 10px 30px 10px 30px;
+    border:solid  var(--p-col) 1px;
+    border-radius: 5px;
+     
+}
+.cartBtn{
+    display: inline;
+}
+.cartBtnOne,.cartBtnTwo,.cartBtnThree{
+    display: inline;
+  
+}
+.cartBtnOne button{
+    background-color: black;
+    border-color: var(--p-col);
+    border-radius: 0%;
+    
+}
+.cartBtnTwo button{
+    background-color: rgb(76, 52, 0);
+    border-color: var(--p-col);
+    border-radius: 0%;
+   
+}
+.cartBtnThree button{
+    background-color: black;
+    border-color: var(--p-col);
+    border-radius: 0%;
+}
+
 @media screen and (max-width:600px)  {
     .productItem{
        display: block;

@@ -9,8 +9,9 @@
 }
 
 .bannerButton button:hover{
-    background-color: orangered;
+    background-color: rgba(255, 68, 0, 0.037);
     border: solid white 1px;
+    color: var(--p-col);
     transition: 300ms;
 }
  

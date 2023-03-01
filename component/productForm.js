@@ -1,11 +1,21 @@
-import { useRef } from 'react';
+import { useRef,useState } from 'react';
 import classes from './productForm.module.css';
+import { useRouter } from 'next/router';
+import Spinner from '../icons/spinner'
 
 function ProductForm(props) {
   const titleInputRef = useRef();
   const imageInputRef = useRef();
   const priceInputRef = useRef();
   const descriptionInputRef = useRef();
+  const router = useRouter();
+  const [spinner, setSpinner] = useState(false)
+  function showDetailsHandler() {
+    setSpinner(<Spinner/>)
+     router.push('/');
+
+   }
+
 
   function submitHandler(event) {
     event.preventDefault();
@@ -23,7 +33,7 @@ function ProductForm(props) {
     };
 
 props.onAddProduct(productData)
-console.log(productData)
+ 
   }
 
   return (
@@ -51,7 +61,7 @@ console.log(productData)
           ></textarea>
         </div>
         <div className={classes.actions}>
-          <button>Add Product</button>
+         <button onClick={showDetailsHandler}> Add Product {spinner}</button>
         </div>
       </form>
     </div>

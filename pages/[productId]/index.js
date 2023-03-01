@@ -1,7 +1,9 @@
+import ProductList from "../../component/productList";
 import { Fragment } from "react"
 import Head from "next/head"
 import ProductDetail from "../../component/productDetail"
 import { MongoClient, ObjectId } from 'mongodb';
+import classes from './index.module.css'
 
 function ProductDetails(props){
     return(
@@ -9,6 +11,7 @@ function ProductDetails(props){
             <Head>
             <title>{props.productData.title}</title>
             <meta name='description' content={props.productData.description} />
+            <link rel="shortcut icon" href="logo.png" type="image/x-icon"></link>
             </Head>
             <ProductDetail
            title = {props.productData.title}
@@ -17,6 +20,8 @@ function ProductDetails(props){
            price = {props.productData.price}
            id={props.productData.id}
             />
+            <h1 className={classes.otherProd}>Products You May be Instrested in</h1>
+          <ProductList products={props.products}/>
         </Fragment>
     )
 }
@@ -44,7 +49,7 @@ export async function getStaticPaths(){
 
 export async function getStaticProps(context){
    const productId = context.params.productId 
-  // const newProductID = productId.toString()
+  
    const client =  await MongoClient.connect('mongodb+srv://joseph:joseph123@cluster0.jod1kwf.mongodb.net/products?retryWrites=true&w=majority');
     
    const db = client.db();
@@ -54,6 +59,8 @@ export async function getStaticProps(context){
    const selectedProduct = await productsCollection.findOne({
     _id:new ObjectId(productId),
   });
+
+  const products = await productsCollection.find().toArray()
 
   client.close();
 
@@ -66,7 +73,18 @@ export async function getStaticProps(context){
         image: selectedProduct.image,
         description: selectedProduct.description,
       },
+      products:  products.map((product)=>({
+        title: product.title,
+        price: product.price,
+        image: product.image,
+        description: product.description,
+        id:product._id.toString(),
+      })),
     },
+    revalidate: 1,
+    
+    
+     
   };
 
 }

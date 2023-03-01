@@ -13,4 +13,10 @@ module.exports = {
   },
 }
 
+module.exports = {
+  env: {
+    customKey: 'mongodb+srv://joseph:joseph123@cluster0.jod1kwf.mongodb.net/products?retryWrites=true&w=majority',
+  },
+}
+
 module.exports = nextConfig

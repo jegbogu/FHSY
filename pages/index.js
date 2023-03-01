@@ -4,6 +4,7 @@ import ProductList from '../component/productList'
 import Head from 'next/head';
 import { Fragment } from 'react';
 import BannerL from '../component/banner/bannerL'
+import classes from './index.module.css'
 
 
 
@@ -12,13 +13,9 @@ const Home = (props) => {
     <Fragment>
       <Head>
       <title>..Household name in online supplies and services.</title>
-        <meta
-          name='description'
-          content='We have African home for export across the world!'
-        />
-        <link rel="shortcut icon" href="brand.webp" type="image/x-icon"></link>
       </Head>
       <BannerL/>
+      <h1 className={classes.prod}>Our Products</h1>
       <ProductList products={props.products}/>
       <h3>Abiom Supplies</h3>
     </Fragment>
