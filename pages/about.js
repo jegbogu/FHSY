@@ -1,7 +1,11 @@
+import AboutSection from "@/component/aboutSection"
+import AboutBanner from "@/component/banner/aboutBanner"
+
 function About(){
     return(
 <div>
-    <h1>About Us</h1>
+        <AboutBanner/>
+        <AboutSection/>
 </div>
     )
 }

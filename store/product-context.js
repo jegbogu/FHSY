@@ -4,7 +4,8 @@ const CartsContext = createContext({
     carts:[],
     totalCarts: 0,
     addCarts:(cartProducts)=>{},
-    removeCart:(productId)=>{}
+    removeCart:(productId)=>{},
+    productIsInCart: (productId)=>{}
 })
 
 export function CartContextProvider(props){
@@ -21,11 +22,15 @@ function removeCartHandler(productId){
     });
 
 }
+function productIsInCartHadler (productId){
+    return userCarts.some(product=> product.id===productId);
+}
 const context = {
     carts:userCarts,
     totalCarts: userCarts.length,
     addCarts: addCartHandler,
     removeCart: removeCartHandler,
+    productIsInCart:productIsInCartHadler,
 }
     return(
         <CartsContext.Provider value={context}>

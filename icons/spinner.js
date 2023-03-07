@@ -1,6 +1,6 @@
 function Spinner(){
     return(
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 50 50"><g transform="rotate(90 25 25)"color="white"><circle cx="25" cy="10" r="2" fill="currentColor"/><circle cx="25" cy="40" r="2" fill="currentColor" opacity=".3"/><circle cx="32.5" cy="12" r="2" fill="currentColor" opacity=".3"/><circle cx="17.5" cy="38" r="2" fill="currentColor" opacity=".3"/><circle cx="17.5" cy="12" r="2" fill="currentColor" opacity=".93"/><circle cx="32.5" cy="38" r="2" fill="currentColor" opacity=".3"/><circle cx="10" cy="25" r="2" fill="currentColor" opacity=".65"/><circle cx="40" cy="25" r="2" fill="currentColor" opacity=".3"/><circle cx="12" cy="17.5" r="2" fill="currentColor" opacity=".86"/><circle cx="38" cy="32.5" r="2" fill="currentColor" opacity=".3"/><circle cx="12" cy="32.5" r="2" fill="currentColor" opacity=".44"/><circle cx="38" cy="17.5" r="2" fill="currentColor" opacity=".3"/></g></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"color="white"><path fill="currentColor" d="M19 8l-4 4h3c0 3.31-2.69 6-6 6c-1.01 0-1.97-.25-2.8-.7l-1.46 1.46C8.97 19.54 10.43 20 12 20c4.42 0 8-3.58 8-8h3l-4-4zM6 12c0-3.31 2.69-6 6-6c1.01 0 1.97.25 2.8.7l1.46-1.46C15.03 4.46 13.57 4 12 4c-4.42 0-8 3.58-8 8H1l4 4l4-4H6z"><animateTransform attributeName="transform" attributeType="XML" dur="5s" from="360 12 12" repeatCount="indefinite" to="0 12 12" type="rotate"/></path></svg>
     )
 }
 

@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Spinner from '../icons/spinner';
 import { useContext } from 'react';
 import CartContext from '../store/product-context'
-
+ 
 
 
 
@@ -12,6 +12,8 @@ import CartContext from '../store/product-context'
 function ProductItem(props){
     const [spinner, setSpinner] = useState(false)
     const [show, setShow] = useState(false)
+    
+    
     const router = useRouter();
     
     function showDetailsHandler() {
@@ -21,6 +23,7 @@ function ProductItem(props){
       }
       function displayCartBtn(){
         setShow(!show)
+         
     }
   
     const[count,setCount] = useState(0)
@@ -39,11 +42,16 @@ function ProductItem(props){
     function subtractHandler(){
         if(count==0){
             setCount(0)
+           
         }else{
             setCount(count-1)
             cartCtx.removeCart(props.id)
         }
     }
+     
+ 
+
+
     return(
  
 <li className={classes.productItem}>
@@ -68,13 +76,15 @@ function ProductItem(props){
     </div>
         
     </div>)
-    : <button className={classes.itemBody} onClick={displayCartBtn}>Add to Cart</button>}
+    : <button onClick={displayCartBtn}>Add to Cart</button>}
           
            <span><button onClick={showDetailsHandler}>Show Details{spinner}</button></span>
         </div>
 
 
     </div>
+    
+
 </li>   
  
     )

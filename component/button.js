@@ -1,11 +1,12 @@
 import { Fragment } from 'react';
 import classes from './button.module.css'
+import Link from 'next/link';
 
 const Button = () => {
     return ( 
     <Fragment>
         <div className={classes.bannerButton}>
-                <button>Shop Now</button>
+                <button> <Link href='/shop'>Shop Now</Link></button>
            </div>     
         </Fragment>      
      );

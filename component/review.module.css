@@ -1,0 +1,6 @@
+.review{
+    margin: 50px auto;
+    border-bottom: solid var(--p-col) 4px;
+    padding-bottom: 20px;
+    width: 40%;
+}

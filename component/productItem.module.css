@@ -1,4 +1,9 @@
- 
+.block{
+    display: block;
+}
+.none{
+    display: none;
+}
 
 .item{
     padding: 20px;

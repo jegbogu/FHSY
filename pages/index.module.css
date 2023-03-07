@@ -1,6 +1,23 @@
+.section{
+    background-color:#FAF8F4;
+}
 .prod{
     text-align: center;
     color: var(--s-col);
-    margin-top: 50px;
+    margin-top: 100px;
     margin-bottom: 20px;
+    font-weight: 900;
+}
+.article{
+    text-align: center;
+    color: var(--s-col);
+    margin: 200px auto;
+    padding-bottom: 20px;
+    border-bottom: solid green 5px;
+    width: 30%;
+}
+.leaf{
+    margin-left: 45%;
+    position: absolute;
+    margin-top: 50px;
 }
